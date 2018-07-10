@@ -1,0 +1,11 @@
+<!-- NGFOR -->
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <!-- hero é chamado de CALITERAÇÃO -->
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected] = "hero === selectedHero">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<!-- componente do hero details -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
